@@ -1,3 +1,9 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +17,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+#drum-machine {
+  border-radius: 50px;
+  box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  background-color: #e0e0e0;;
+  padding: 3rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 1rem;
+}
+
+#display {
+  background-color: bisque;
+  width: 10rem;
+  height: 3rem;
+  margin: 0 auto;
+  padding: .5rem;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.pads-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.drum-pad {
+  padding: 2rem;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  outline: none;
+  border: none;
+}
+
+.drum-pad:active, .drum-pad-active {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: inset 20px 20px 60px #bebebe,
+              inset -20px -20px 60px #ffffff;
+  font-weight: bold;
+}
+
+
+
